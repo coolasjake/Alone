@@ -1,0 +1,109 @@
+///Main code block.
+if keyboard_check(ord('D')) or keyboard_check(vk_right) {key_right = 1}
+else {key_right = 0}
+if keyboard_check(ord('A')) or keyboard_check(vk_left) {key_left = -1}
+else {key_left = 0}
+if keyboard_check_pressed(ord('W')) or keyboard_check_pressed(vk_up) {key_jump = 1}
+else {key_jump = 0}
+
+//Add L/R inputs.
+move = key_left + key_right;
+
+//Flip image if facing left.
+if move > 0 and vsp = 0 and (place_meeting(x,y+1,obj_Wall_Test))
+{
+sprite_index = spr_legs_animated
+image_speed = (10/60)
+}
+else if move < 0 and vsp = 0 and (place_meeting(x,y+1,obj_Wall_Test))
+{
+sprite_index = spr_legs_animated
+image_speed = (10/60)
+}
+else {sprite_index = spr_suit_3}
+
+//Set horizontal speed + add gravity.
+hsp = move * movespeed;
+if (vsp < 16) {vsp += grav}
+else {fall_time += 1}
+
+//Doublejump.
+//*NOTE: Change \/ to 'if (doublejump = 1' to disable double jumps.
+if (doublejump = 0 and key_jump = 1)
+{
+    doublejump = 1
+    key_jump = 0
+    //vsp =  -jumpspeed
+}
+//Rocketboots.
+if rocketboot_count > 0 and (keyboard_check(ord('W')) or keyboard_check(vk_up)) and rocketboot_pause = 0
+{
+    rocketboot_count -= 1
+    if vsp > -(rocketboot_power*10) {vsp -= rocketboot_power}
+}
+else if rocketboot_pause > 0 {rocketboot_pause -= 1}
+
+if rocketboot_count < rocketboot_length and !(keyboard_check(ord('W')) or keyboard_check(vk_up))
+{
+if rocketboot_count_count = 1
+{
+    rocketboot_count += 1
+    rocketboot_count_count = 0
+}
+else
+{
+rocketboot_count_count += 1
+}
+}
+
+//Jump if touching a wall.
+if (place_meeting(x,y+1,obj_Wall_Test) and key_jump = 1)
+{
+    doublejump = 0
+    vsp =  -jumpspeed
+    //rocketboot_count = rocketboot_length
+    rocketboot_pause = 10
+}
+
+//horizontal colision
+if (place_meeting(x+hsp,y,obj_Wall_Test))
+{
+    while(!place_meeting(x+sign(hsp),y,obj_Wall_Test))
+     {
+          x += sign(hsp);
+     }
+     hsp = 0;
+}
+x += hsp;
+
+//vertical colision
+if (place_meeting(x,y+vsp,obj_Wall_Test))
+{
+        //if rocketboot_count < rocketboot_length {rocketboot_count += 1}
+    while(!place_meeting(x,y+sign(vsp),obj_Wall_Test))
+     {
+        y += sign(vsp);
+     }
+     if (vsp > 0)
+     {
+        doublejump = 1
+        prevmeeting = 1
+        //rocketboot_count = rocketboot_length
+     }
+     else if rocketboot_count < rocketboot_length {rocketboot_count += 1}
+     //Fall damage
+     if vsp > 8.5
+     { 
+        if ceil((vsp*2)+(fall_time/2)) <= max_damage {Integrity -= ceil((vsp*2)+(fall_time/2))}
+        else {Integrity -= max_damage}
+        fall_time = 0
+     }
+     vsp = 0
+}
+else if (prevmeeting = 1)
+{
+prevmeeting = 0
+doublejump = 0
+}
+
+y += vsp;
