@@ -34,7 +34,9 @@
       <sprite>sprites\spr_stat_display</sprite>
       <sprite>sprites\spr_Cursor</sprite>
       <sprite>sprites\spr_Map_border</sprite>
+      <sprite>sprites\spr_Compressor_closing</sprite>
       <sprite>sprites\spr_items</sprite>
+      <sprite>sprites\spr_Compressor_open</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_stone1_edge</sprite>
@@ -42,12 +44,29 @@
       <sprite>sprites\spr_block_edge_c</sprite>
       <sprite>sprites\spr_block_edge</sprite>
       <sprite>sprites\spr_stone_2</sprite>
+      <sprite>sprites\spr_ore_nickel</sprite>
+      <sprite>sprites\spr_ore_cobalt</sprite>
+      <sprite>sprites\spr_ore_tinanium</sprite>
+      <sprite>sprites\spr_ore_iron</sprite>
+      <sprite>sprites\spr_ore_gold</sprite>
       <sprite>sprites\spr_stone_1</sprite>
       <sprite>sprites\spr_Wall_1</sprite>
     </sprites>
+    <sprites name="Hex_Blocks">
+      <sprite>sprites\spr_HEX_TEMPLATE</sprite>
+      <sprite>sprites\spr_H_stone_1</sprite>
+      <sprite>sprites\spr_H_test</sprite>
+      <sprite>sprites\spr_H_stone_2</sprite>
+      <sprite>sprites\spr_H_ore_iron</sprite>
+    </sprites>
+    <sprite>sprites\spr_Save</sprite>
+    <sprite>sprites\block</sprite>
+    <sprite>sprites\spr_Hex_calcs</sprite>
+    <sprite>sprites\spr_Mask</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -66,20 +85,40 @@
       <object>objects\obj_Wall_Parent</object>
       <object>objects\obj_Stone_1</object>
       <object>objects\obj_Stone_2</object>
+      <object>objects\obj_ore_iron</object>
+      <object>objects\obj_ore_gold</object>
+      <object>objects\obj_ore_nickel</object>
       <object>objects\obj_INDESTRUCTIBLE</object>
     </objects>
+    <objects name="Hex Blocks">
+      <object>objects\obj_H_Wall_Parent</object>
+      <object>objects\obj_H_Stone_1</object>
+      <object>objects\obj_H_Stone_2</object>
+      <object>objects\obj_H_INDESTRUCTIBLE</object>
+      <object>objects\obj_H_ore_iron</object>
+    </objects>
     <object>objects\obj_particle_wall</object>
+    <object>objects\obj_Save</object>
+    <object>objects\obj_room_generate</object>
+    <object>objects\obj_Inventory</object>
+    <object>objects\obj_Square</object>
+    <object>objects\obj_Hexagon</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room6</room>
+    <room>rooms\room5</room>
+    <room>rooms\room_test</room>
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
+    <room>rooms\room3</room>
     <room>rooms\room_remember_to_duplicate</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">42066.476713912</constant>
-    <constant name="GM_version">'1.0.0.0'</constant>
+    <constant name="GM_build_date">42078.4649722222</constant>
+    <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

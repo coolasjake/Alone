@@ -181,18 +181,16 @@ if count &lt; 7
     {
         for (distance=0;distance&lt;97;distance+=1)
         {
-            if collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,all,0,1)
+            if collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,all,1,1)
             {
             ID.source = 0
-            ID = collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,all,0,1)
+            ID = collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,all,1,1)
             ID.strength -= laser_power
             ID.source = 1
             new_angle = scr_angle_circle(angle,-22)
             ID.angle = angle//floor(new_angle/45)
             A = degtorad(angle+180)
             draw_sprite_general(spr_good_laser,image_count,0,0,distance,32,final_X+sin(A)*15,final_Y+cos(A)*15,image_xscale,1,angle,c_white,c_white,c_white,c_white,1)
-            //draw_set_alpha(0.5)
-            //draw_circle_colour(final_X+sin(A)*distance,final_Y+cos(A)*distance,10,c_white,c_green,0)
             break
             }
         }
@@ -201,18 +199,16 @@ if count &lt; 7
     {
         for (distance=0;distance&lt;97;distance+=1)
         {
-            if collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,all,0,1)
+            if collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,all,1,1)
             {
             ID.source = 0
-            ID = collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,all,0,1)
+            ID = collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,all,1,1)
             ID.strength -= laser_power
             ID.source = 1
             new_angle = scr_angle_circle(angle,-22)
             ID.angle = angle//floor(new_angle/45)
             A = degtorad((angle+180)-(2*angle))
             draw_sprite_general(spr_good_laser,image_count,0,0,distance,32,final_X-sin(A)*8,final_Y+cos(A)*15,image_xscale,1,angle,c_white,c_white,c_white,c_white,1)
-            //draw_set_alpha(0.5)
-            //draw_circle_colour(final_X-sin(A)*distance,final_Y-cos(A)*distance,10,c_white,c_green,0)
             break
             }
         }

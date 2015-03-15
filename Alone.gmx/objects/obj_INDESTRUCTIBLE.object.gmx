@@ -33,9 +33,9 @@ Exists1 = 0
 Exists2 = 0
 Exists3 = 0
 Exists4 = 0
-check = 0
+check = 1
 source = 0
-surface = 3
+surface = 4
 ID_up = collision_point(x+32,y-32,obj_Wall_Parent,0,1)
 ID_down = collision_point(x+32,y+96,obj_Wall_Parent,0,1)
 ID_left = collision_point(x-32,y+32,obj_Wall_Parent,0,1)
@@ -67,14 +67,20 @@ if instance_exists(ID_right) {Exists4 = 1}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>///Draw block + damage.
+if surface &lt; 4 {draw_self()}
 
+if surface &gt; 0
+{
 draw_set_colour(c_black)
 draw_set_alpha((surface)/4)
 draw_rectangle(x,y,x+63,y+63,0)
+}
 
-if strength != max_strength
+if strength != max_strength or check = 1
 {
+check = 0
+
 Exists1 = 0
 Exists2 = 0
 Exists3 = 0
