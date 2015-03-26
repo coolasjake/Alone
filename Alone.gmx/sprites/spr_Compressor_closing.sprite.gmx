@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>6</bbox_left>
-  <bbox_right>185</bbox_right>
-  <bbox_top>23</bbox_top>
-  <bbox_bottom>228</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>179</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>205</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>192</width>
-  <height>256</height>
+  <width>186</width>
+  <height>233</height>
   <frames>
     <frame index="0">images\spr_Compressor_closing_0.png</frame>
     <frame index="1">images\spr_Compressor_closing_1.png</frame>
@@ -42,5 +42,21 @@
     <frame index="19">images\spr_Compressor_closing_19.png</frame>
     <frame index="20">images\spr_Compressor_closing_20.png</frame>
     <frame index="21">images\spr_Compressor_closing_21.png</frame>
+    <frame index="22">images\spr_Compressor_closing_22.png</frame>
+    <frame index="23">images\spr_Compressor_closing_23.png</frame>
+    <frame index="24">images\spr_Compressor_closing_24.png</frame>
+    <frame index="25">images\spr_Compressor_closing_25.png</frame>
+    <frame index="26">images\spr_Compressor_closing_26.png</frame>
+    <frame index="27">images\spr_Compressor_closing_27.png</frame>
+    <frame index="28">images\spr_Compressor_closing_28.png</frame>
+    <frame index="29">images\spr_Compressor_closing_29.png</frame>
+    <frame index="30">images\spr_Compressor_closing_30.png</frame>
+    <frame index="31">images\spr_Compressor_closing_31.png</frame>
+    <frame index="32">images\spr_Compressor_closing_32.png</frame>
+    <frame index="33">images\spr_Compressor_closing_33.png</frame>
+    <frame index="34">images\spr_Compressor_closing_34.png</frame>
+    <frame index="35">images\spr_Compressor_closing_35.png</frame>
+    <frame index="36">images\spr_Compressor_closing_36.png</frame>
+    <frame index="37">images\spr_Compressor_closing_37.png</frame>
   </frames>
 </sprite>

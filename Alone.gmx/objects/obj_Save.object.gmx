@@ -56,10 +56,11 @@ global.PY = y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//with (all)
-//{
-//if !(object_index = obj_Save or object_index = obj_Player_Main or object_index = obj_Lazer or object_index = obj_Helmet) {instance_destroy()}
-//}
+            <string>exit
+with (all)
+{
+if !(object_index = obj_Save or object_index = obj_Player_Main or object_index = obj_Lazer or object_index = obj_Helmet) {instance_destroy()}
+}
 
 
 for (i=0;i&lt;=(room_width/64);i+=1)
@@ -75,7 +76,7 @@ else if global.Map[i,j] = 6 {instance_create(i*64,j*64,obj_ore_nickel)}
 }
 }
 
-instance_create(global.PX,global.PY,obj_Player_Main)
+//instance_create(global.PX,global.PY,obj_Player_Main)
 </string>
           </argument>
         </arguments>
@@ -98,7 +99,7 @@ instance_create(global.PX,global.PY,obj_Player_Main)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>exit
 if show_question("Save?")
 {
     for (i=0;i&lt;=(room_width/64);i+=1)
@@ -149,20 +150,6 @@ if show_question("Load?")
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>222</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

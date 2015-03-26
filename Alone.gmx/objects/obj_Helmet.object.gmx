@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Helmet rotation.
+if pause = true {exit}
+
 angle = point_direction(x,y,mouse_x,mouse_y)
 
 if angle &gt; 90 and angle &lt; 180 

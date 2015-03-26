@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize variables.
-laser_power = 10
+laser_power = 100
 image_count = 0
 ID = instance_nearest(x,y,obj_Wall_Parent)
 </string>
@@ -72,8 +72,8 @@ image_xscale = 1
 //obj_Player_Main.image_xscale = 1
 }
 
-if angle &gt; 0 and angle &lt;= 90 and angle &gt; 45 {angle = 45}
-else if angle &gt;= 270 and angle &lt; 360 and angle &lt; 315 {angle = 315}
+if angle &gt; 0 and angle &lt;= 90 and angle &gt; 60 {angle = 60}
+else if angle &gt;= 270 and angle &lt; 360 and angle &lt; 300 {angle = 300}
 
 /*else if angle &lt; 180 and angle &gt; 90 and angle &lt; 135
 {
@@ -115,6 +115,8 @@ y = obj_Player_Main.y+26
           <argument>
             <kind>1</kind>
             <string>///Laser Draw Code.
+if pause = true {draw_self(); exit}
+
 if mouse_check_button(mb_left) and !(obj_Player_Main.Energy-laser_power &lt; 0)
 {
 
@@ -150,9 +152,15 @@ new_X = final_X-sin(A)*96
 new_Y = final_Y-cos(A)*96
 }
 
+//if (angle &gt;= 300 and angle &lt;= 315) or (angle &gt;= 45 and angle &lt;= 60) {max_range = 5}
+//else if (angle &lt;= 3 or angle &gt;= 357) {max_range = 6}
+//else {max_range = 8}
+
+max_range = 9
+
 //while laser has not hit object
 count = 0
-while !collision_line(final_X,final_Y,new_X,new_Y,all,0,1) and count &lt; 7
+while !collision_line(final_X,final_Y,new_X,new_Y,obj_Wall_Parent,1,1) and count &lt; max_range
 {
     draw_sprite_ext(spr_good_laser,image_count,final_X,final_Y,obj_Player_Main.x_flip,1,angle,c_white,1)
     final_X = new_X
@@ -174,17 +182,17 @@ while !collision_line(final_X,final_Y,new_X,new_Y,all,0,1) and count &lt; 7
 
 //Draw final part of laser
 //A = degtorad(angle)
-if count &lt; 7
+if count &lt; max_range
 {
     distance = 0
     if image_xscale = 1
     {
         for (distance=0;distance&lt;97;distance+=1)
         {
-            if collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,all,1,1)
+            if collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,obj_Wall_Parent,1,1)
             {
             ID.source = 0
-            ID = collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,all,1,1)
+            ID = collision_point(final_X+sin(A)*distance,final_Y+cos(A)*distance,obj_Wall_Parent,1,1)
             ID.strength -= laser_power
             ID.source = 1
             new_angle = scr_angle_circle(angle,-22)
@@ -199,10 +207,10 @@ if count &lt; 7
     {
         for (distance=0;distance&lt;97;distance+=1)
         {
-            if collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,all,1,1)
+            if collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,obj_Wall_Parent,1,1)
             {
             ID.source = 0
-            ID = collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,all,1,1)
+            ID = collision_point(final_X-sin(A)*distance,final_Y-cos(A)*distance,obj_Wall_Parent,1,1)
             ID.strength -= laser_power
             ID.source = 1
             new_angle = scr_angle_circle(angle,-22)

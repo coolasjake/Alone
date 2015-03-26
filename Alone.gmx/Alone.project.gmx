@@ -35,7 +35,7 @@
       <sprite>sprites\spr_Cursor</sprite>
       <sprite>sprites\spr_Map_border</sprite>
       <sprite>sprites\spr_Compressor_closing</sprite>
-      <sprite>sprites\spr_items</sprite>
+      <sprite>sprites\spr_Items</sprite>
       <sprite>sprites\spr_Compressor_open</sprite>
     </sprites>
     <sprites name="Blocks">
@@ -56,13 +56,21 @@
       <sprite>sprites\spr_HEX_TEMPLATE</sprite>
       <sprite>sprites\spr_H_stone_1</sprite>
       <sprite>sprites\spr_H_test</sprite>
+      <sprite>sprites\spr_Heat</sprite>
       <sprite>sprites\spr_H_stone_2</sprite>
+      <sprite>sprites\spr_H_indestructable</sprite>
       <sprite>sprites\spr_H_ore_iron</sprite>
     </sprites>
     <sprite>sprites\spr_Save</sprite>
     <sprite>sprites\block</sprite>
     <sprite>sprites\spr_Hex_calcs</sprite>
     <sprite>sprites\spr_Mask</sprite>
+    <sprite>sprites\spr_Rocket</sprite>
+    <sprite>sprites\sprite50</sprite>
+    <sprite>sprites\spr_compressor_save</sprite>
+    <sprite>sprites\spr_SurfaceLine</sprite>
+    <sprite>sprites\spr_Surface_Line2</sprite>
+    <sprite>sprites\spr_Items_save</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -92,23 +100,26 @@
     </objects>
     <objects name="Hex Blocks">
       <object>objects\obj_H_Wall_Parent</object>
+      <object>objects\obj_H_INDESTRUCTIBLE</object>
       <object>objects\obj_H_Stone_1</object>
       <object>objects\obj_H_Stone_2</object>
-      <object>objects\obj_H_INDESTRUCTIBLE</object>
       <object>objects\obj_H_ore_iron</object>
     </objects>
-    <object>objects\obj_particle_wall</object>
+    <object>objects\obj_Animate_Block</object>
     <object>objects\obj_Save</object>
     <object>objects\obj_room_generate</object>
     <object>objects\obj_Inventory</object>
     <object>objects\obj_Square</object>
     <object>objects\obj_Hexagon</object>
+    <object>objects\obj_Sprite_Test</object>
+    <object>objects\obj_Sprite_Test2</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room6</room>
+    <room>rooms\room7</room>
     <room>rooms\room5</room>
     <room>rooms\room_test</room>
     <room>rooms\room1</room>
@@ -117,8 +128,8 @@
     <room>rooms\room_remember_to_duplicate</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">42078.4649722222</constant>
-    <constant name="GM_version">'1.0.0.1'</constant>
+    <constant name="GM_build_date">42089.3747339236</constant>
+    <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

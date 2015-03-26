@@ -89,6 +89,7 @@ animation_done = 1
 else if sprite_index = spr_Compressor_closing and image_speed &gt; 0
 {
 sprite_index = -1
+image_speed = 0
 }
 </string>
           </argument>

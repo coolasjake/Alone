@@ -7,24 +7,24 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>7</bbox_left>
-  <bbox_right>255</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>54</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>343</bbox_right>
+  <bbox_top>13</bbox_top>
+  <bbox_bottom>95</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>256</width>
-  <height>64</height>
+  <width>384</width>
+  <height>96</height>
   <frames>
-    <frame index="0">images\spr_items_0.png</frame>
-    <frame index="1">images\spr_items_1.png</frame>
-    <frame index="2">images\spr_items_2.png</frame>
-    <frame index="3">images\spr_items_3.png</frame>
-    <frame index="4">images\spr_items_4.png</frame>
-    <frame index="5">images\spr_items_5.png</frame>
+    <frame index="0">images\spr_Items_0.png</frame>
+    <frame index="1">images\spr_Items_1.png</frame>
+    <frame index="2">images\spr_Items_2.png</frame>
+    <frame index="3">images\spr_Items_3.png</frame>
+    <frame index="4">images\spr_Items_4.png</frame>
+    <frame index="5">images\spr_Items_5.png</frame>
   </frames>
 </sprite>
