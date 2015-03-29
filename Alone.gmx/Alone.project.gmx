@@ -4,17 +4,22 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_BackMusic</sound>
+    <sound>sound\snd_Laser_00</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Drawing Sprites">
       <sprite>sprites\spr_arm_1</sprite>
       <sprite>sprites\spr_suit_boosters_1</sprite>
-      <sprite>sprites\spr_stone_0_heating</sprite>
       <sprite>sprites\spr_lazer_beam</sprite>
-      <sprite>sprites\sprite16</sprite>
+      <sprite>sprites\spr_Lazer_NoSparks</sprite>
       <sprite>sprites\spr_stats_border_save</sprite>
       <sprite>sprites\spr_stat_border</sprite>
       <sprite>sprites\spr_preview</sprite>
+      <sprite>sprites\spr_compressor_save</sprite>
+      <sprite>sprites\spr_Items_save</sprite>
+      <sprite>sprites\spr_Hex_calcs</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_torch_1</sprite>
@@ -27,6 +32,7 @@
       <sprite>sprites\spr_Helmet</sprite>
       <sprite>sprites\spr_laser</sprite>
       <sprite>sprites\spr_good_laser</sprite>
+      <sprite>sprites\spr_Mask</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_helmet_light</sprite>
@@ -40,7 +46,6 @@
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_stone1_edge</sprite>
-      <sprite>sprites\spr_block_corner</sprite>
       <sprite>sprites\spr_block_edge_c</sprite>
       <sprite>sprites\spr_block_edge</sprite>
       <sprite>sprites\spr_stone_2</sprite>
@@ -63,14 +68,10 @@
     </sprites>
     <sprite>sprites\spr_Save</sprite>
     <sprite>sprites\block</sprite>
-    <sprite>sprites\spr_Hex_calcs</sprite>
-    <sprite>sprites\spr_Mask</sprite>
     <sprite>sprites\spr_Rocket</sprite>
     <sprite>sprites\sprite50</sprite>
-    <sprite>sprites\spr_compressor_save</sprite>
     <sprite>sprites\spr_SurfaceLine</sprite>
     <sprite>sprites\spr_Surface_Line2</sprite>
-    <sprite>sprites\spr_Items_save</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -121,14 +122,14 @@
     <room>rooms\room6</room>
     <room>rooms\room7</room>
     <room>rooms\room5</room>
-    <room>rooms\room_test</room>
     <room>rooms\room1</room>
     <room>rooms\room2</room>
     <room>rooms\room3</room>
     <room>rooms\room_remember_to_duplicate</room>
+    <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">42089.3747339236</constant>
+    <constant name="GM_build_date">42092.1157227778</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

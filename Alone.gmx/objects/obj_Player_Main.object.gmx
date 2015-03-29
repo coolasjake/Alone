@@ -26,36 +26,40 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables.
-grav = 0.2
+
+//*NOTE: Variables with comments are ones that could be changed by items or in settings.
+
+
+grav = 0.2                  //Downwards acceleration of gravity.
 hsp = 0
 vsp = 0
-movespeed = 4
-jumpspeed = 6.5
+movespeed = 4               //Players horisontal movement speed (also while falling).
+jumpspeed = 6.5             //Initial upwards speed of a jump.
 doublejump = 0
-rocketboot_length = 6000
-rocketboot_power = 0.3
-rocketboot_count = 0
+rocketboot_length = 6000    //Number of steps (60 per second) rocketboots can be on for continuously.
+rocketboot_power = 0.3      //Ammount of upwards 'force' they provide (subtract gravity).
+rocketboot_count = 0        
 rocketboot_count_count = 0
 rocketboot_pause = 0
 fall_time = 0
-max_damage = 50
+max_damage = 50             //Maximum damage player can take from one thing.
 prevmeeting = 0
 x_flip = 1
 angle = 0
 image_count = 0
 image_count_count = 0
-image = spr_suit_3_0
+image = spr_suit_3_0        //(WILL) be used to change the armour sprite.
 deactivate_count = 5
 mouse_up = 0
 
 selected_item = 0
 
-inner_radius = 15
-total_radius = 17
+inner_radius = 15           //Size of the rocketboot display circle.
+total_radius = 17           //See above.
 
-T_Energy = 500000
-T_Integrity = 100
-T_Oxygen = 3600
+T_Energy = 500000           //Total/Max energy.
+T_Integrity = 100           //Total/Max integrity (health).
+T_Oxygen = 3600             //Total/Max oxygen.
 
 Energy = T_Energy
 Integrity = T_Integrity
@@ -67,7 +71,7 @@ prev_Integrity_count = 0
 globalvar pause;
 pause = false
 
-draw_set_font(font_stats)
+draw_set_font(font_stats)   //Font for stats. Code needs to be changed if multiple stats are used.
 </string>
           </argument>
         </arguments>
@@ -116,6 +120,30 @@ if !instance_exists(obj_Lazer) {instance_create(x,y,obj_Lazer)}
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_BackMusic</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -374,7 +402,7 @@ else if object_index = obj_Stone_2 {global.Map[floor(x/64),floor(y/64)] = 3}
 global.PX = x
 global.PY = y
 
-instance_deactivate_region(view_xview[1] - 220, view_yview[1] - 220, view_wview[1] + 220, view_hview[1] + 220, false, true)
+instance_deactivate_region(view_xview[1] - 220, view_yview[1] - 220, view_xview[1] + view_wview[1] + 220, view_yview[1] + view_hview[1] + 220, false, true)
 instance_activate_object(obj_Helmet)
 instance_activate_object(obj_Lazer)
 instance_activate_object(obj_Save)
