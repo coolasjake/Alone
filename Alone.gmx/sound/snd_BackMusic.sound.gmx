@@ -22,7 +22,7 @@
   </bitDepths>
   <preload>-1</preload>
   <data>snd_BackMusic.mp3</data>
-  <compressed>1</compressed>
+  <compressed>0</compressed>
   <streamed>0</streamed>
-  <uncompressOnLoad>1</uncompressOnLoad>
+  <uncompressOnLoad>0</uncompressOnLoad>
 </sound>
