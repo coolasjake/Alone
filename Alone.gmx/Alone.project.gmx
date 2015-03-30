@@ -86,6 +86,11 @@
       <object>objects\obj_Player_Main</object>
       <object>objects\obj_Helmet</object>
       <object>objects\obj_Lazer</object>
+      <objects name="AI">
+        <object>objects\obj_AI_Main</object>
+        <object>objects\obj_AI_Helmet</object>
+        <object>objects\obj_AI_Lazer</object>
+      </objects>
     </objects>
     <objects name="Blocks">
       <object>objects\obj_Wall_Parent</object>
@@ -116,6 +121,7 @@
   <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room6</room>
+    <room>rooms\room8</room>
     <room>rooms\room7</room>
     <room>rooms\room5</room>
     <room>rooms\room1</room>
@@ -125,8 +131,8 @@
     <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">42093.43898</constant>
-    <constant name="GM_version">'1.0.0.1'</constant>
+    <constant name="GM_build_date">42093.4794723148</constant>
+    <constant name="GM_version">'1.0.0.2'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
