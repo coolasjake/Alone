@@ -125,25 +125,29 @@ if !instance_exists(obj_Lazer) {instance_create(x,y,obj_Lazer)}
       </action>
       <action>
         <libid>1</libid>
-        <id>211</id>
+        <id>404</id>
         <kind>0</kind>
         <userelative>0</userelative>
-        <isquestion>0</isquestion>
+        <isquestion>-1</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_sound</functionname>
+        <functionname>action_if_number</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>6</kind>
-            <sound>snd_BackMusic</sound>
+            <kind>10</kind>
+            <object>obj_Player_Main</object>
           </argument>
           <argument>
-            <kind>3</kind>
-            <string>1</string>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -481,6 +485,15 @@ draw_text(132,60,string(ceil((Energy/T_Energy)*100))+"%")
 draw_set_colour(c_aqua)
 if Oxygen &gt; 0 {draw_rectangle(12,82,((Oxygen/T_Oxygen)*145)+12,83,0)}
 draw_text(132,94,string(ceil((Oxygen/T_Oxygen)*100))+"%")
+
+
+draw_set_color(c_white)
+draw_set_alpha(1)
+draw_text(850,5 ,"Horizontal speed: " + string(hsp))
+draw_text(850,15,"Vertical speed:   " + string(vsp))
+draw_text(850,25,"Horizontal position: " + string(x))
+draw_text(850,35,"Vertical position:   " + string(y))
+
 
 //Rocketboot fuel circle (partially copied)
 var i

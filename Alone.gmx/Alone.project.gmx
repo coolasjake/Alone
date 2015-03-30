@@ -4,10 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\snd_BackMusic</sound>
-    <sound>sound\snd_Laser_00</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Drawing Sprites">
       <sprite>sprites\spr_arm_1</sprite>
@@ -20,6 +17,7 @@
       <sprite>sprites\spr_compressor_save</sprite>
       <sprite>sprites\spr_Items_save</sprite>
       <sprite>sprites\spr_Hex_calcs</sprite>
+      <sprite>sprites\spr_edge_Save</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_torch_1</sprite>
@@ -68,7 +66,6 @@
     </sprites>
     <sprite>sprites\spr_Save</sprite>
     <sprite>sprites\block</sprite>
-    <sprite>sprites\spr_Rocket</sprite>
     <sprite>sprites\sprite50</sprite>
     <sprite>sprites\spr_SurfaceLine</sprite>
     <sprite>sprites\spr_Surface_Line2</sprite>
@@ -103,6 +100,7 @@
       <object>objects\obj_H_Wall_Parent</object>
       <object>objects\obj_H_INDESTRUCTIBLE</object>
       <object>objects\obj_H_Stone_1</object>
+      <object>objects\obj_H_Air</object>
       <object>objects\obj_H_Stone_2</object>
       <object>objects\obj_H_ore_iron</object>
     </objects>
@@ -115,9 +113,7 @@
     <object>objects\obj_Sprite_Test</object>
     <object>objects\obj_Sprite_Test2</object>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\timeline0</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room6</room>
     <room>rooms\room7</room>
@@ -129,8 +125,8 @@
     <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">42092.1157227778</constant>
-    <constant name="GM_version">'1.0.0.0'</constant>
+    <constant name="GM_build_date">42093.43898</constant>
+    <constant name="GM_version">'1.0.0.1'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
