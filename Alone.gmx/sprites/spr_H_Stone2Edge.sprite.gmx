@@ -20,11 +20,11 @@
   <width>90</width>
   <height>80</height>
   <frames>
-    <frame index="0">images\spr_block_edge_0.png</frame>
-    <frame index="1">images\spr_block_edge_1.png</frame>
-    <frame index="2">images\spr_block_edge_2.png</frame>
-    <frame index="3">images\spr_block_edge_3.png</frame>
-    <frame index="4">images\spr_block_edge_4.png</frame>
-    <frame index="5">images\spr_block_edge_5.png</frame>
+    <frame index="0">images\spr_H_Stone2Edge_0.png</frame>
+    <frame index="1">images\spr_H_Stone2Edge_1.png</frame>
+    <frame index="2">images\spr_H_Stone2Edge_2.png</frame>
+    <frame index="3">images\spr_H_Stone2Edge_3.png</frame>
+    <frame index="4">images\spr_H_Stone2Edge_4.png</frame>
+    <frame index="5">images\spr_H_Stone2Edge_5.png</frame>
   </frames>
 </sprite>

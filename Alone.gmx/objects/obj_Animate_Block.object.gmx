@@ -3,7 +3,7 @@
   <spriteName>spr_H_stone_2</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-8</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>distance1 = distance_to_point(obj_Player_Main.x,obj_Player_Main.y+20)
+            <string>distance1 = distance_to_point(obj_Player_Main.x,obj_Player_Main.y+35)
 distance = distance1
-move_towards_point(obj_Player_Main.x,obj_Player_Main.y+20,4/(distance/2))
+move_towards_point(obj_Player_Main.x,obj_Player_Main.y+35,4/(distance/2))
 </string>
           </argument>
         </arguments>
@@ -51,8 +51,8 @@ move_towards_point(obj_Player_Main.x,obj_Player_Main.y+20,4/(distance/2))
           <argument>
             <kind>1</kind>
             <string>
-distance = distance_to_point(obj_Player_Main.x,obj_Player_Main.y+20)
-if distance &gt; 24 {move_towards_point(obj_Player_Main.x,obj_Player_Main.y+20,120/(sqrt(distance)))}
+distance = distance_to_point(obj_Player_Main.x,obj_Player_Main.y+35)
+if distance &gt; 24 {move_towards_point(obj_Player_Main.x,obj_Player_Main.y+35,120/(sqrt(distance)))}
 else
 {
 //obj_Player_Main.Stone1 += 1

@@ -57,7 +57,7 @@ selected_item = 0
 inner_radius = 15           //Size of the rocketboot display circle.
 total_radius = 17           //See above.
 
-T_Energy = 500000           //Total/Max energy.
+T_Energy = 5000000          //Total/Max energy.
 T_Integrity = 100           //Total/Max integrity (health).
 T_Oxygen = 3600             //Total/Max oxygen.
 
@@ -364,7 +364,11 @@ if move = 0 and !(key_down = 1) and (place_meeting(x,y+1,obj_Wall_Parent))
 if !(place_meeting(x+1,y+1,obj_Wall_Parent)) {x += 1}
 else if !(place_meeting(x-1,y+1,obj_Wall_Parent)) {x -= 1}
 }
-
+if (keyboard_check(ord('W')) or keyboard_check(vk_up) or mouse_up = 1) and !(key_down = 1) and (place_meeting(x,y-1,obj_Wall_Parent))
+{
+if !(place_meeting(x+1,y-1,obj_Wall_Parent)) {x += 1}
+else if !(place_meeting(x-1,y-1,obj_Wall_Parent)) {x -= 1}
+}
 
 
 if place_meeting(x,y,obj_Wall_Parent)

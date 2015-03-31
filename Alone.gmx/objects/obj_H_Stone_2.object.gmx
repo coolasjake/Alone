@@ -128,12 +128,12 @@ if strength != max_strength
 if prev_strength = strength and strength &lt; max_strength {strength += 1}
 else if source = 1
 {
-if Exists1 = 1 {ID_up_left.strength -= (prev_strength - strength)/2}
-if Exists2 = 1 {ID_up.strength -= (prev_strength - strength)/2}
-if Exists3 = 1 {ID_up_right.strength -= (prev_strength - strength)/2}
-if Exists4 = 1 {ID_down_right.strength -= (prev_strength - strength)/2}
-if Exists5 = 1 {ID_down.strength -= (prev_strength - strength)/2}
-if Exists6 = 1 {ID_down_left.strength -= (prev_strength - strength)/2}
+if Exists1 = 1 {ID_up_left.strength -= floor((prev_strength - strength)/2)}
+if Exists2 = 1 {ID_up.strength -= floor((prev_strength - strength)/2)}
+if Exists3 = 1 {ID_up_right.strength -= floor((prev_strength - strength)/2)}
+if Exists4 = 1 {ID_down_right.strength -= floor((prev_strength - strength)/2)}
+if Exists5 = 1 {ID_down.strength -= floor((prev_strength - strength)/2)}
+if Exists6 = 1 {ID_down_left.strength -= floor((prev_strength - strength)/2)}
 }
 if strength &lt;= 0
 {
@@ -143,6 +143,7 @@ if Exists3 = 1 {ID_up_right.Exists6 = 0}
 if Exists4 = 1 {ID_down_right.Exists1 = 0}
 if Exists5 = 1 {ID_down.Exists2 = 0}
 if Exists6 = 1 {ID_down_left.Exists3 = 0}
+if y &gt; 1840 {instance_create(x,y,obj_H_Air)}
 ID = instance_create(x,y,obj_Animate_Block)
 ID.sprite_index = sprite_index
 instance_destroy()
@@ -154,12 +155,12 @@ if surface = 0
 {
 draw_set_alpha(1)
 col = make_colour_hsv(8, 210, 255-(((max_strength-strength)/max_strength)*145))
-if Exists2 = 0 {draw_sprite_ext(spr_block_edge,0,x,y,1,1,0,col,1)}
-if Exists1 = 0 {draw_sprite_ext(spr_block_edge,1,x,y,1,1,0,col,1)}
-if Exists6 = 0 {draw_sprite_ext(spr_block_edge,2,x,y,1,1,0,col,1)}
-if Exists5 = 0 {draw_sprite_ext(spr_block_edge,3,x,y,1,1,0,col,1)}
-if Exists4 = 0 {draw_sprite_ext(spr_block_edge,4,x,y,1,1,0,col,1)}
-if Exists3 = 0 {draw_sprite_ext(spr_block_edge,5,x,y,1,1,0,col,1)}
+if Exists2 = 0 {draw_sprite_ext(spr_H_Stone2Edge,0,x,y,1,1,0,col,1)}
+if Exists1 = 0 {draw_sprite_ext(spr_H_Stone2Edge,1,x,y,1,1,0,col,1)}
+if Exists6 = 0 {draw_sprite_ext(spr_H_Stone2Edge,2,x,y,1,1,0,col,1)}
+if Exists5 = 0 {draw_sprite_ext(spr_H_Stone2Edge,3,x,y,1,1,0,col,1)}
+if Exists4 = 0 {draw_sprite_ext(spr_H_Stone2Edge,4,x,y,1,1,0,col,1)}
+if Exists3 = 0 {draw_sprite_ext(spr_H_Stone2Edge,5,x,y,1,1,0,col,1)}
 }
 
 draw_set_colour(c_white)
@@ -168,12 +169,12 @@ prev_strength = strength
 else if surface = 0
 {
 draw_set_alpha(1)
-if Exists2 = 0 {draw_sprite(spr_block_edge,0,x,y)}
-if Exists1 = 0 {draw_sprite(spr_block_edge,1,x,y)}
-if Exists6 = 0 {draw_sprite(spr_block_edge,2,x,y)}
-if Exists5 = 0 {draw_sprite(spr_block_edge,3,x,y)}
-if Exists4 = 0 {draw_sprite(spr_block_edge,4,x,y)}
-if Exists3 = 0 {draw_sprite(spr_block_edge,5,x,y)}
+if Exists2 = 0 {draw_sprite(spr_H_Stone2Edge,0,x,y)}
+if Exists1 = 0 {draw_sprite(spr_H_Stone2Edge,1,x,y)}
+if Exists6 = 0 {draw_sprite(spr_H_Stone2Edge,2,x,y)}
+if Exists5 = 0 {draw_sprite(spr_H_Stone2Edge,3,x,y)}
+if Exists4 = 0 {draw_sprite(spr_H_Stone2Edge,4,x,y)}
+if Exists3 = 0 {draw_sprite(spr_H_Stone2Edge,5,x,y)}
 /*
 if Exists2 = 0 {draw_sprite_ext(spr_block_edge,0,x,y,1,1,0,c_white,1)}
 if Exists1 = 0 {draw_sprite_ext(spr_block_edge,0,x-18,y+32,1,1,60,c_white,1)}

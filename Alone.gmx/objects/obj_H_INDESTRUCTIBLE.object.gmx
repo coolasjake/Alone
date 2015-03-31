@@ -3,7 +3,7 @@
   <spriteName>spr_H_indestructable</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>obj_H_Wall_Parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
