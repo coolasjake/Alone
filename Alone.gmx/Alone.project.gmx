@@ -134,8 +134,8 @@
     <room>rooms\room_test</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">42095.0591234259</constant>
-    <constant name="GM_version">'1.0.0.1'</constant>
+    <constant name="GM_build_date">42095.0715006366</constant>
+    <constant name="GM_version">'1.0.0.3'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

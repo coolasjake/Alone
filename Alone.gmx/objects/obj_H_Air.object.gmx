@@ -58,6 +58,30 @@ if Exists1 = 0 or Exists2 = 0 or Exists3 = 0 or Exists4 = 0 or Exists5 = 0 or Ex
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>117</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_snap</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>55</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>33</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -77,7 +101,7 @@ if Exists1 = 0 or Exists2 = 0 or Exists3 = 0 or Exists4 = 0 or Exists5 = 0 or Ex
           <argument>
             <kind>1</kind>
             <string>///Draw block + damage.
-draw_self()
+if y &gt; 1840 {draw_self()}
 /*
 if surface = 0 {draw_self()}
 else
